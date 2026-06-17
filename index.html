@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InternHunt — By a BITSian, For a BITSian</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- PROGRESS BAR -->
+  <div class="progress-bar-wrap">
+    <div class="progress-bar-fill" id="progressBar"></div>
+  </div>
+
+  <!-- BACK TO TOP -->
+  <a href="#" class="back-top" id="backTop">↑</a>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">Intern<span>Hunt</span></a>
+    <ul class="nav-links">
+      <li><a href="#process">The Process</a></li>
+      <li><a href="#findcompanies">Find Companies</a></li>
+      <li><a href="#getemail">Get Emails</a></li>
+      <li><a href="#coldmail">Cold Mail</a></li>
+      <li><a href="#interview">Interview Flow</a></li>
+      <li><a href="#resume">Resume Builder</a></li>
+    </ul>
+    <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+    <a href="#resume" class="nav-cta">Build Resume →</a>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#process"       onclick="toggleMenu()">① The Full Playbook</a>
+    <a href="#findcompanies" onclick="toggleMenu()">② Find Companies</a>
+    <a href="#getemail"      onclick="toggleMenu()">③ Get Emails</a>
+    <a href="#coldmail"      onclick="toggleMenu()">④ Cold Mail</a>
+    <a href="#interview"     onclick="toggleMenu()">⑤ Interview Flow</a>
+    <a href="#resume"        onclick="toggleMenu()">✨ Resume Builder</a>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ HERO -->
+  <section class="hero" style="max-width:100%;">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+
+    <div class="hero-tag">🎓 By a BITSian, For a BITSian · The No-Portal Playbook</div>
+
+    <h1>
+      <span class="line1">Land Your First</span>
+      <span class="line2">Internship at a <span class="typewriter" id="typewriter">Startup</span></span>
+    </h1>
+
+    <p class="hero-sub">
+      The complete playbook — from finding the <em>right</em> companies,
+      to cold mailing founders, cracking interviews, and building your resume.
+      <em>No campus placements. No referrals. No portal fees.</em>
+    </p>
+
+    <div class="hero-author-card fade-in">
+      <div class="author-proof-badge">✅ Verified — Gets Replies</div>
+      <div class="author-avatar">RV</div>
+      <div>
+        <div class="author-name">Rajay Vardhan Rai</div>
+        <div class="author-id">2024A2PS1255P · BITS Pilani, Pilani Campus · +91-9266134679</div>
+        <div class="author-quote">"I built this after 3 weeks figuring out what nobody told me. These exact templates landed me internships at Evolve, Indumaa, HappyProut & more — with founder replies."</div>
+      </div>
+    </div>
+
+    <button class="btn-start-journey" id="startBtn" onclick="startJourney()">
+      🚀 Start Your Journey Now
+    </button>
+
+    <div id="heroContent">
+      <div class="hero-btns">
+        <a href="#process"  class="btn-secondary">① Read the Playbook</a>
+        <a href="#coldmail" class="btn-secondary">✉️ Draft Cold Mail</a>
+        <a href="#resume"   class="btn-secondary">📄 Build Resume</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="num" data-count="15" data-suffix="%">0%</div>
+          <div class="label">Cold mail response rate with right targeting</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">3–5</div>
+          <div class="label">Weeks from first mail to offer letter</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">₹0</div>
+          <div class="label">Cost — zero portals, zero fees</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════════════ PROCESS -->
+  <section class="page-section" id="process">
+    <div class="section-tag">Step-by-step</div>
+    <h2>The Full Internship <span class="highlight">Playbook</span></h2>
+    <p class="section-lead">Here's exactly how the process works — from zero to offer letter. Follow these steps in order.</p>
+    <p style="font-size:0.78rem;color:var(--muted);margin-bottom:1.25rem;font-family:'JetBrains Mono',monospace;">Click any step to expand details</p>
+
+    <div class="step-flow">
+
+      <div class="step-item" onclick="toggleStep(this)">
+        <div><div class="step-num">1</div></div>
+        <div class="step-content">
+          <h3>Find the Right Companies to Target <span class="step-toggle">▼</span></h3>
+          <p>Hunt for startups with <strong style="color:var(--amber)">recent Seed–Series B funding</strong> or new product verticals. Less bureaucracy, accessible founders, and open roles.</p>
+          <div class="step-badge">🎯 New funding = open roles + responsive founders</div>
+          <div class="step-detail">
+            <div class="step-detail-inner">
+              <p>Avoid applying to <strong>Google, Zomato, Swiggy</strong> as a fresher — they get 50,000+ applications. Your edge is in the <strong>30–200 person</strong> company that just raised.</p>
+              <p><strong>Where to find them:</strong></p>
+              <ul class="step-checklist">
+                <li>Tracxn + Crunchbase: filter "India", "last 6 months", "Seed to Series B"</li>
+                <li>Inc42 weekly funding newsletter — bookmark it</li>
+                <li>YC Startup Directory — filter by India + stage</li>
+                <li>LinkedIn News: "Series A" + "hiring" + "engineering"</li>
+                <li>Product Hunt: sort by newest, find Indian teams</li>
+              </ul>
+              <p style="margin-top:0.75rem;"><strong>Target 20 companies per week.</strong> Build a spreadsheet: Company | Founder Name | LinkedIn | Funding Stage | Email (TBD) | Status.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-item" onclick="toggleStep(this)">
+        <div><div class="step-num">2</div></div>
+        <div class="step-content">
+          <h3>Find the Founder or HoD's Email <span class="step-toggle">▼</span></h3>
+          <p>Use <strong style="color:var(--cyan)">ContactOut</strong> or <strong style="color:var(--cyan)">Apollo.ai</strong> Chrome extensions to extract verified work emails directly from LinkedIn profiles.</p>
+          <div class="step-badge">🔍 Tools: ContactOut + Apollo.ai Chrome Extensions</div>
+          <div class="step-detail">
+            <div class="step-detail-inner">
+              <p>The goal is to reach the <strong>decision-maker</strong>, not the HR inbox. For companies under 50 people, email the <strong style="color:var(--amber)">Founder or Co-Founder</strong>. For 50–200, email the <strong style="color:var(--amber)">Head of Engineering / Product / Design</strong>.</p>
+              <ul class="step-checklist">
+                <li>ContactOut: 40 free emails/month — enough for a strong weekly batch</li>
+                <li>Apollo.io: 50 free exports/month + richer company context</li>
+                <li>Hunter.io: great for finding email formats if the others miss</li>
+                <li>Email format guesser: firstname@company.com is correct 70% of the time</li>
+                <li>Never email info@, hello@, or careers@ — these are black holes</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-item" onclick="toggleStep(this)">
+        <div><div class="step-num">3</div></div>
+        <div class="step-content">
+          <h3>Write a Killer Cold Mail <span class="step-toggle">▼</span></h3>
+          <p>Your cold mail has <strong style="color:var(--cyan)">one job</strong>: get a reply. Under 180 words, hyper-personalized, ends with a low-friction ask.</p>
+          <div class="step-badge">✉️ Formula: Intro → Research → Value → Solution → CTA</div>
+          <div class="step-detail">
+            <div class="step-detail-inner">
+              <p>The difference between 0% and 15% reply rate is <strong>specificity</strong>. Generic openers get deleted. A mail that names their product, spots a real gap, and proposes a concrete fix gets a reply.</p>
+              <ul class="step-checklist">
+                <li>Subject line: "CS Undergrad @ BITS — Quick idea for [specific product]"</li>
+                <li>Line 1–2: Who you are + how you found them (specific trigger)</li>
+                <li>Line 3–4: One specific observation about their product/company</li>
+                <li>Line 5–6: Why you + why now (matching your skills to their stack)</li>
+                <li>Line 7–8: Concrete offer — a spec, a prototype idea, a doc</li>
+                <li>CTA: Ask for a 20-min call OR offer to send the spec. Give two paths.</li>
+                <li>Sign off with: name, BITS + branch + year, GitHub, phone</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-item" onclick="toggleStep(this)">
+        <div><div class="step-num">4</div></div>
+        <div class="step-content">
+          <h3>Navigate the Interview Pipeline <span class="step-toggle">▼</span></h3>
+          <p>Three rounds: HR culture fit → Technical deep-dive with HoD → Final HR + salary. Knowing the flow means you <strong style="color:var(--amber)">never get blindsided.</strong></p>
+          <div class="step-badge">🧭 Know the pipeline before it starts</div>
+          <div class="step-detail">
+            <div class="step-detail-inner">
+              <p>Most startup internship pipelines follow this exact structure. The timeline from first reply to offer letter is typically <strong>2–3 weeks</strong>.</p>
+              <ul class="step-checklist">
+                <li>Round 1 (HR — 15–30 min): communication, culture fit, availability, stipend ballpark</li>
+                <li>Round 2 (HoD — 60–90 min): 1–2 LeetCode mediums, system design, deep project dive</li>
+                <li>Round 3 (Final HR — 30 min): offer discussion, negotiation, logistics</li>
+                <li>Preparation: re-read your cold mail — they will reference it</li>
+                <li>Negotiate: always counter. First offer is never the final offer.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-item" onclick="toggleStep(this)">
+        <div><div class="step-num">5</div></div>
+        <div class="step-content">
+          <h3>Build a Clean ATS-Friendly Resume <span class="step-toggle">▼</span></h3>
+          <p>Use the AI resume builder below. Generates LaTeX code → paste into Overleaf → compile → PDF in 2 minutes.</p>
+          <div class="step-badge">📄 LaTeX via Overleaf — ATS parsable, recruiter approved</div>
+          <div class="step-detail">
+            <div class="step-detail-inner">
+              <p>Recruiters spend <strong>6–8 seconds</strong> on your resume. It needs to be clean, scannable, and honest. LaTeX gives you pixel-perfect formatting that Word cannot match.</p>
+              <ul class="step-checklist">
+                <li>Use strong action verbs: Built, Reduced, Shipped, Designed, Led, Optimized</li>
+                <li>Every bullet must have a metric: "Reduced latency by 40%", "Handled 10K+ requests/day"</li>
+                <li>Projects section > Experience section if you have no internship yet</li>
+                <li>CGPA &lt; 7.5? Lead with projects. CGPA ≥ 8.0? Lead with education.</li>
+                <li>Keep to 1 page — even seniors. Recruiters hate scrolling.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════════════ FIND COMPANIES -->
+  <section class="page-section" id="findcompanies">
+    <div class="section-tag amber">Phase 1</div>
+    <h2>Finding the Right <span class="amber-text">Companies</span></h2>
+    <p class="section-lead">The secret is targeting companies in the right growth phase. Freshers get noticed at startups that are scaling — not at MNCs processing 10,000 applications.</p>
+
+    <div class="filter-tabs">
+      <button class="filter-tab active" onclick="filterCompanies('all', this)">All Types</button>
+      <button class="filter-tab" onclick="filterCompanies('funded', this)">💰 Recently Funded</button>
+      <button class="filter-tab" onclick="filterCompanies('vertical', this)">🚀 New Verticals</button>
+      <button class="filter-tab" onclick="filterCompanies('deeptech', this)">🔬 Deep Tech</button>
+    </div>
+
+    <div class="company-grid" id="companyGrid">
+      <div class="company-card fade-in" data-cat="funded">
+        <div class="company-card-icon" style="background:rgba(199, 123, 77,0.1);">💰</div>
+        <h4>Recently Funded Startups</h4>
+        <p>Series A–B startups in the last 6 months. New funding means new engineering hires, new product features, and founders who are reachable and building fast.</p>
+      </div>
+      <div class="company-card fade-in" data-cat="vertical">
+        <div class="company-card-icon" style="background:rgba(75, 86, 148,0.1);">🚀</div>
+        <h4>Companies Launching New Verticals</h4>
+        <p>Companies expanding to new geographies or products. They need fast-moving interns who can ship. Founders are hands-on and accessible.</p>
+      </div>
+      <div class="company-card fade-in" data-cat="deeptech">
+        <div class="company-card-icon" style="background:rgba(139, 111, 142,0.1);">🔬</div>
+        <h4>Deep Tech & AI-First</h4>
+        <p>YC-backed and research-to-product companies. If you have relevant project experience, your cold mail will stand out dramatically.</p>
+      </div>
+      <div class="company-card fade-in" data-cat="funded">
+        <div class="company-card-icon" style="background:rgba(114, 136, 174,0.1);">🌱</div>
+        <h4>Seed-Stage Consumer Apps</h4>
+        <p>Pre-product-market-fit startups building consumer apps in health, finance, or edtech. The founders still answer emails and hire interns they personally like.</p>
+      </div>
+      <div class="company-card fade-in" data-cat="vertical">
+        <div class="company-card-icon" style="background:rgba(199, 123, 77,0.1);">🏭</div>
+        <h4>B2B SaaS Going Enterprise</h4>
+        <p>Startups transitioning from SMB to enterprise customers. They need product, engineering, and growth interns immediately.</p>
+      </div>
+      <div class="company-card fade-in" data-cat="deeptech">
+        <div class="company-card-icon" style="background:rgba(75, 86, 148,0.1);">🤖</div>
+        <h4>AI Tooling & Infrastructure</h4>
+        <p>LLM wrappers, developer tools, and AI-native startups. These teams are tiny and desperately need technically strong students who understand the AI landscape.</p>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <strong>💡 Pro Tip:</strong> Go to LinkedIn → search
+      <code style="background:rgba(255,255,255,0.08);padding:2px 6px;border-radius:3px;font-family:monospace">site:linkedin.com/company + "Series A" + "hiring"</code>.
+      Or use Inc42's funding tracker to get a fresh list every week. Target 20 companies per week.
+    </div>
+
+    <div class="tracker-widget fade-in">
+      <div class="tracker-header">
+        <h4>📊 Company Target Tracker</h4>
+        <span style="font-size:0.72rem;color:var(--muted);font-family:'JetBrains Mono',monospace;">Saved in your browser</span>
+      </div>
+      <div class="tracker-add">
+        <input type="text" id="trackerInput" placeholder="Company name (e.g. Setu, Razorpay, Dukaan)" onkeypress="if(event.key==='Enter') addCompany()" />
+        <button onclick="addCompany()">+ Add</button>
+      </div>
+      <div id="trackerList">
+        <div class="tracker-empty">No companies yet. Add your first target above ↑</div>
+      </div>
+      <div class="tracker-stats" id="trackerStats"></div>
+    </div>
+
+    <div style="margin-top:2.5rem;">
+      <div class="section-tag amber" style="margin-bottom:1rem;">Where to Hunt</div>
+      <div class="resource-grid">
+        <a href="https://tracxn.com"                              target="_blank" rel="noopener" class="resource-card"><div class="resource-icon">🔎</div><div class="resource-info"><div class="resource-name">Tracxn</div><div class="resource-desc">Startup intelligence + funding data</div></div><span class="resource-arrow">↗</span></a>
+        <a href="https://crunchbase.com"                          target="_blank" rel="noopener" class="resource-card"><div class="resource-icon">💼</div><div class="resource-info"><div class="resource-name">Crunchbase</div><div class="resource-desc">Company profiles + funding rounds</div></div><span class="resource-arrow">↗</span></a>
+        <a href="https://inc42.com/buzz/funding-alerts/"          target="_blank" rel="noopener" class="resource-card"><div class="resource-icon">📰</div><div class="resource-info"><div class="resource-name">Inc42 Funding Alerts</div><div class="resource-desc">Weekly Indian startup funding news</div></div><span class="resource-arrow">↗</span></a>
+        <a href="https://www.ycombinator.com/companies?country=IN" target="_blank" rel="noopener" class="resource-card"><div class="resource-icon">🚀</div><div class="resource-info"><div class="resource-name">YC India Companies</div><div class="resource-desc">Y Combinator-backed Indian startups</div></div><span class="resource-arrow">↗</span></a>
+        <a href="https://www.producthunt.com"                     target="_blank" rel="noopener" class="resource-card"><div class="resource-icon">🐱</div><div class="resource-info"><div class="resource-name">Product Hunt</div><div class="resource-desc">Newest products — find founding teams</div></div><span class="resource-arrow">↗</span></a>
+        <a href="https://angel.co/jobs"                           target="_blank" rel="noopener" class="resource-card"><div class="resource-icon">😇</div><div class="resource-info"><div class="resource-name">Wellfound (AngelList)</div><div class="resource-desc">Startup job board — direct to founders</div></div><span class="resource-arrow">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════════════ GET EMAIL -->
+  <section class="page-section" id="getemail">
+    <div class="section-tag">Phase 2</div>
+    <h2>Finding the Founder's <span class="highlight">Email</span></h2>
+    <p class="section-lead">The most important step. You need the decision-maker's direct email — not the generic info@company.com black hole.</p>
+
+    <div class="tool-showcase">
+      <div class="tool-card">
+        <div class="tool-card-header">
+          <div class="tool-dot" style="background:#5B4FE8;"></div>
+          <h4>ContactOut</h4>
+          <span style="margin-left:auto;font-size:0.72rem;color:var(--muted);">chrome extension</span>
+        </div>
+        <div class="tool-card-body">
+          <div class="tool-step"><div class="tool-step-num">1</div><div>Install <span>ContactOut from Chrome Web Store</span> — free plan gives 40 emails/month</div></div>
+          <div class="tool-step"><div class="tool-step-num">2</div><div>Open the founder's <span>LinkedIn profile</span> in your browser</div></div>
+          <div class="tool-step"><div class="tool-step-num">3</div><div>Click the <span>ContactOut extension icon</span> — it pops up beside the profile</div></div>
+          <div class="tool-step"><div class="tool-step-num">4</div><div><span>Verified email</span> appears instantly. Copy it. Done.</div></div>
+          <div style="display:flex;gap:8px;margin:0.75rem 0 0.25rem;">
+            <a href="https://contactout.com" target="_blank" rel="noopener" class="tool-ext-link purple">🔌 Install ContactOut ↗</a>
+            <a href="https://chromewebstore.google.com/detail/contactout/jjdemeiffadmmjhkbbpglgnlgeafnogp" target="_blank" rel="noopener" class="tool-ext-link purple">Chrome Web Store ↗</a>
+          </div>
+          <div class="linkedin-demo" style="position:relative;min-height:80px;">
+            <div class="linkedin-header">
+              <div class="li-avatar">AK</div>
+              <div>
+                <div class="li-name">Aman Kapoor</div>
+                <div class="li-title">Co-Founder &amp; CEO at FinTech Startup · Bangalore</div>
+              </div>
+            </div>
+            <div class="contactout-popup">
+              <div class="co-logo">● ContactOut</div>
+              <div class="co-email">aman@fintechco.in</div>
+              <div class="co-email" style="opacity:0.6">a.kapoor@gmail.com</div>
+              <div class="co-btn">✓ Verified Work Email</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-card-header">
+          <div class="tool-dot" style="background:#F97316;"></div>
+          <h4>Apollo.io</h4>
+          <span style="margin-left:auto;font-size:0.72rem;color:var(--muted);">chrome extension + platform</span>
+        </div>
+        <div class="tool-card-body">
+          <div class="tool-step"><div class="tool-step-num">1</div><div>Sign up at <span>Apollo.io</span> (free — 50 exports/month) and install their Chrome extension</div></div>
+          <div class="tool-step"><div class="tool-step-num">2</div><div>Use Apollo's <span>People search</span> — filter by Company + Job Title</div></div>
+          <div class="tool-step"><div class="tool-step-num">3</div><div>On LinkedIn, the extension <span>overlays email + phone</span> directly on the profile page</div></div>
+          <div class="tool-step"><div class="tool-step-num">4</div><div><span>Bonus:</span> Apollo also shows past companies, tech stack, and funding info</div></div>
+          <div style="display:flex;gap:8px;margin:0.75rem 0 0.25rem;">
+            <a href="https://apollo.io" target="_blank" rel="noopener" class="tool-ext-link orange">🔌 Install Apollo.io ↗</a>
+            <a href="https://chromewebstore.google.com/detail/apolloio-b2b-lead-database/alhgpfoeiimagjlnfekdhkjnkegdbljm" target="_blank" rel="noopener" class="tool-ext-link orange">Chrome Web Store ↗</a>
+          </div>
+          <div style="background:#1A1A2E;border-radius:8px;padding:1rem;margin-top:1rem;font-size:0.78rem;">
+            <div style="color:var(--muted);margin-bottom:8px;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:0.72rem;">APOLLO SEARCH FILTERS</div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;">
+              <span style="background:rgba(249,115,22,0.15);color:#F97316;padding:3px 8px;border-radius:4px;font-family:monospace;font-size:0.72rem;">Job Title: Head of Engineering</span>
+              <span style="background:rgba(249,115,22,0.15);color:#F97316;padding:3px 8px;border-radius:4px;font-family:monospace;font-size:0.72rem;">Company Size: 11–50</span>
+              <span style="background:rgba(249,115,22,0.15);color:#F97316;padding:3px 8px;border-radius:4px;font-family:monospace;font-size:0.72rem;">Funding: Seed</span>
+              <span style="background:rgba(249,115,22,0.15);color:#F97316;padding:3px 8px;border-radius:4px;font-family:monospace;font-size:0.72rem;">Country: India</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tip-box" style="margin-top:1.5rem;background:rgba(75, 86, 148,0.04);border-color:rgba(75, 86, 148,0.2);border-left-color:var(--cyan);">
+      <strong style="color:var(--cyan);">🎯 Who to email:</strong> For a startup with under 50 people, email the <strong style="color:var(--text)">Founder directly.</strong> For 50–200 people, target the <strong style="color:var(--text)">HoD of the vertical</strong> you want. Emailing HR as a first contact is a waste — they're screeners, not decision-makers.
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════════════ COLD MAIL -->
+  <section class="page-section" id="coldmail">
+    <div class="section-tag green">Phase 3</div>
+    <h2>Writing the Perfect <span class="green-text">Cold Mail</span></h2>
+    <p class="section-lead">Your cold mail is your first impression. Under 180 words, hyper-personalized, and end with a clear ask. Here's the exact anatomy:</p>
+
+    <div class="proof-section fade-in">
+      <div class="proof-badge">✅ Real Mail. Real Founder Replies.</div>
+      <h3 style="font-family:'Space Grotesk',sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:6px;">This exact format gets replies — screenshot proof below</h3>
+      <p style="font-size:0.84rem;color:var(--muted);">These are Rajay's actual application screenshots sent to Good Monk (children's nutrition startup). Study the structure — 3 scrolls, one ask, real results.</p>
+      <div class="proof-images">
+        <div class="proof-img-wrap">
+          <img src="IMG_3843.png" alt="Cold mail page 1 — intro and work experience" loading="lazy" />
+          <div class="proof-img-label">① INTRO + EXPERIENCE — who you are &amp; what you've built</div>
+        </div>
+        <div class="proof-img-wrap">
+          <img src="IMG_3844.png" alt="Cold mail page 2 — why this company" loading="lazy" />
+          <div class="proof-img-label">② WHY THIS COMPANY — specific insight about their product</div>
+        </div>
+        <div class="proof-img-wrap">
+          <img src="IMG_3845.png" alt="Cold mail page 3 — closing and CTA" loading="lazy" />
+          <div class="proof-img-label">③ CLOSING + CLEAR ASK — low-friction CTA that works</div>
+        </div>
+      </div>
+      <div class="proof-stats">
+        <div class="proof-stat"><div class="pnum">3+</div><div class="plabel">Internships landed<br>with this method</div></div>
+        <div class="proof-stat"><div class="pnum">~15%</div><div class="plabel">Reply rate when<br>properly targeted</div></div>
+        <div class="proof-stat"><div class="pnum">&lt;180w</div><div class="plabel">Max email length<br>that gets read</div></div>
+        <div class="proof-stat"><div class="pnum">₹0</div><div class="plabel">Referrals or<br>connections needed</div></div>
+      </div>
+    </div>
+
+    <div class="email-anatomy">
+      <div class="email-topbar">
+        <div class="dot" style="background:#FF5F56;"></div>
+        <div class="dot" style="background:#FFBD2E;"></div>
+        <div class="dot" style="background:#27C93F;"></div>
+        <span style="margin-left:1rem;flex:1;">New Message — Gmail</span>
+        <span>To: aman@fintechco.in</span>
+      </div>
+      <div style="padding:0.75rem 1.25rem;border-bottom:1px solid var(--border2);font-size:0.82rem;color:var(--muted);">
+        <strong style="color:var(--text)">Subject:</strong> CS Undergrad @ BITS Pilani — Quick idea for your [specific product/feature]
+      </div>
+      <div class="email-body">
+        <div class="email-part intro">
+          <div class="email-label green">① Intro — who you are (2 lines)</div>
+          <p>Hi Aman, I'm Rahul — a second-year CS student at BITS Pilani (Goa). I came across FinTechCo after your Series A announcement last month and spent a few hours with your product.</p>
+        </div>
+        <div class="email-part research">
+          <div class="email-label cyan">② Company Research — show you did homework (2–3 lines)</div>
+          <p>Your UPI reconciliation dashboard is genuinely the cleanest I've seen — but I noticed the analytics tab doesn't surface merchant-level churn signals in real time. Given that you're targeting 10,000+ merchants, that's probably a gap your team already knows about.</p>
+        </div>
+        <div class="email-part value">
+          <div class="email-label amber">③ Why You + Why Now (2 lines)</div>
+          <p>I've spent the last semester building a real-time event pipeline in Go + Kafka for a personal project — the same stack your job posts mention. I'd love to spend a summer putting that to work on something that matters.</p>
+        </div>
+        <div class="email-part solution">
+          <div class="email-label purple">④ Non-Generic Concrete Offer (3–4 lines)</div>
+          <p>I put together a rough 2-page spec on how I'd approach the merchant churn signal feature — using event sourcing on the existing transaction stream. Happy to share it if it's interesting. Not asking you to read a thesis — just a concrete demonstration that I can think in your problem space.</p>
+        </div>
+        <div class="email-part cta">
+          <div class="email-label green">⑤ Clear, Low-Friction CTA</div>
+          <p>Would a 20-minute call next week work? If not, I'm happy to just send the spec over — no call needed. Either way, no pressure.</p>
+          <br>
+          <p>Best, Rahul<br><span style="color:var(--muted);font-size:0.8rem;">BITS Pilani | CS '27 | github.com/rahul | +91 98765 43210</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-card"><span class="num">❌</span><p><strong style="color:var(--text)">Never say:</strong> "I am a passionate learner who wants to gain experience at your esteemed organization." This goes straight to trash.</p></div>
+      <div class="info-card"><span class="num">✅</span><p><strong style="color:var(--text)">Always mention:</strong> A specific product, feature, blog post, or funding news. Prove you spent 20 minutes on their product before emailing.</p></div>
+      <div class="info-card"><span class="num">📎</span><p><strong style="color:var(--text)">Attach a spec/doc:</strong> Spending 2 hours on a concrete proposal beats 20 generic applications. Founders remember effort.</p></div>
+      <div class="info-card"><span class="num">⏱️</span><p><strong style="color:var(--text)">Follow up once:</strong> If no reply in 5 days, send one short follow-up: "Following up on my email — still happy to share the spec if useful."</p></div>
+    </div>
+
+    <!-- AI EMAIL GENERATOR -->
+    <div class="email-gen-wrap fade-in">
+      <div class="email-gen-header">
+        <h4>✨ AI Cold Mail Drafter <span class="ai-badge">Powered by Claude</span></h4>
+        <p>Fill in your details — get a personalised draft like Rajay's in seconds. Tweak, copy, send.</p>
+      </div>
+      <div class="email-gen-fields">
+        <div class="email-gen-field"><label>Your Name</label><input type="text" id="eg_name" placeholder="Rahul Sharma" /></div>
+        <div class="email-gen-field"><label>Your Branch + Year</label><input type="text" id="eg_branch" placeholder="CS, 2nd Year, Goa Campus" /></div>
+        <div class="email-gen-field"><label>Target Company</label><input type="text" id="eg_company" placeholder="Setu (fintech API startup)" /></div>
+        <div class="email-gen-field"><label>Founder / HoD Name</label><input type="text" id="eg_founder" placeholder="Sahil Kini" /></div>
+        <div class="email-gen-field" style="grid-column:1/-1;">
+          <label>What you noticed about their product (specific observation)</label>
+          <textarea id="eg_observation" placeholder="Their UPI reconciliation dashboard is clean, but the analytics tab doesn't surface merchant-level churn signals in real time."></textarea>
+        </div>
+        <div class="email-gen-field"><label>Your relevant skill / project</label><input type="text" id="eg_skill" placeholder="Built a real-time event pipeline in Go + Kafka" /></div>
+        <div class="email-gen-field"><label>Their tech stack (from job posts)</label><input type="text" id="eg_stack" placeholder="Go, Kafka, PostgreSQL, React" /></div>
+      </div>
+      <button class="email-gen-btn" id="emailGenBtn" onclick="generateEmail()">🤖 Generate My Cold Mail Draft</button>
+      <div class="preview-loading" id="emailGenLoading" style="display:none;height:120px;">
+        <div class="spinner"></div>
+        <p style="font-size:0.85rem;color:var(--muted);">Crafting your personalised cold mail...</p>
+      </div>
+      <div class="email-output" id="emailOutput"></div>
+      <button class="email-copy-btn" id="emailCopyBtn" onclick="copyEmail()">📋 Copy Email Draft</button>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════════════ INTERVIEW -->
+  <section class="page-section" id="interview">
+    <div class="section-tag purple">Phase 4</div>
+    <h2>The Interview <span style="color:var(--purple)">Pipeline</span></h2>
+    <p class="section-lead">Once you get a reply, here's exactly how the process unfolds — typically 2–3 weeks from first reply to offer letter.</p>
+    <p style="font-size:0.78rem;color:var(--muted);margin-bottom:1rem;font-family:'JetBrains Mono',monospace;">Click any stage to see exactly what happens</p>
+
+    <div class="flow-container" id="pipelineFlow">
+      <div class="pipeline-node active" data-stage="mail"    onclick="showStage(this,'mail')">   <div class="pipeline-node-icon">✉️</div><h4>Cold Mail</h4>           <p>Day 1</p>    </div>
+      <div class="flow-arrow">→</div>
+      <div class="pipeline-node"        data-stage="connect" onclick="showStage(this,'connect')"><div class="pipeline-node-icon">🤝</div><h4>Founder → HR</h4>        <p>Day 2–5</p>  </div>
+      <div class="flow-arrow">→</div>
+      <div class="pipeline-node"        data-stage="hr"      onclick="showStage(this,'hr')">    <div class="pipeline-node-icon">📞</div><h4>HR Screening</h4>         <p>Day 6–10</p> </div>
+      <div class="flow-arrow">→</div>
+      <div class="pipeline-node"        data-stage="tech"    onclick="showStage(this,'tech')">  <div class="pipeline-node-icon">💻</div><h4>Technical Round</h4>      <p>Day 12–16</p></div>
+      <div class="flow-arrow">→</div>
+      <div class="pipeline-node"        data-stage="offer"   onclick="showStage(this,'offer')"> <div class="pipeline-node-icon">💰</div><h4>Offer + Negotiation</h4> <p>Day 18–22</p></div>
+    </div>
+
+    <div class="pipeline-detail-panel" id="pipelinePanel"></div>
+
+    <div class="flow-detail-grid">
+      <div class="flow-detail-card">
+        <h4><span style="color:var(--cyan)">●</span> HR Screening (Round 1)</h4>
+        <ul>
+          <li>Tell me about yourself — your 60-second pitch</li>
+          <li>Why this company specifically (use your cold mail research)</li>
+          <li>What do you know about our product?</li>
+          <li>Availability, location, stipend expectations</li>
+          <li>Basic communication and energy check</li>
+        </ul>
+      </div>
+      <div class="flow-detail-card">
+        <h4><span style="color:var(--purple)">●</span> Technical Round with HoD (Round 2)</h4>
+        <ul>
+          <li>DSA: 1–2 medium LeetCode questions (arrays, strings, graphs)</li>
+          <li>System design basics — how you'd design a feature</li>
+          <li>Your projects — expect deep dives on every line</li>
+          <li>Domain questions (ML, backend, mobile based on role)</li>
+          <li>Your concrete proposal/spec if you sent one</li>
+        </ul>
+      </div>
+      <div class="flow-detail-card">
+        <h4><span style="color:var(--amber)">●</span> Final HR + Salary (Round 3)</h4>
+        <ul>
+          <li>Culture fit — do you align with company values?</li>
+          <li>Salary range: For first-year BITSians, expect ₹15K–₹40K/month</li>
+          <li>Negotiate: "I have another offer at X — can you match?"</li>
+          <li>Ask about mentorship, tech stack, and what project you'll own</li>
+          <li>Get everything in writing — offer letter with stipend confirmed</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tip-box" style="background:rgba(114, 136, 174,0.04);border-color:rgba(114, 136, 174,0.2);border-left-color:var(--green);">
+      <strong style="color:var(--green)">💡 Salary Negotiation Script:</strong> "Thank you for the offer — I'm very excited about this role. Based on my research and a competing offer I have, I was hoping for ₹X. Is there any flexibility on that?" — Always counter. The first number is never the final number.
+    </div>
+
+    <div class="script-card fade-in" style="margin-top:2rem;">
+      <div class="script-header">💬 Salary Negotiation Script — Use this word-for-word</div>
+      <div class="script-body">
+        <div class="script-line">
+          <span class="script-speaker speaker-hr">HR</span>
+          <div class="script-text">"We'd like to offer you a stipend of ₹20,000/month for the 2-month internship. How does that sound?"</div>
+        </div>
+        <div class="script-line">
+          <span class="script-speaker speaker-you">You</span>
+          <div class="script-text">"Thank you — I'm genuinely excited about this role and the team. I did want to mention that I have another offer at <em>₹28,000/month</em>. Given what I can bring to the [specific project they mentioned], is there any flexibility to get closer to that? I'm very committed to joining here if we can make it work."</div>
+        </div>
+        <div class="script-tip"><strong>Why this works:</strong> You thanked them, anchored with a competing number, referenced the specific role, and gave them a face-saving out. Always negotiate.</div>
+        <div class="script-line" style="margin-top:1rem;">
+          <span class="script-speaker speaker-hr">HR</span>
+          <div class="script-text">"We can stretch to ₹24,000. That's our max for this role."</div>
+        </div>
+        <div class="script-line">
+          <span class="script-speaker speaker-you">You</span>
+          <div class="script-text">"I appreciate that. Can we also confirm that the offer letter will specify the project I'll be working on and the tech stack involved? That's important to me from a learning perspective."</div>
+        </div>
+        <div class="script-tip"><strong>Even if they don't move on stipend:</strong> Ask for project clarity, mentorship access, return offer consideration, or a letter of recommendation.</div>
+      </div>
+    </div>
+
+    <div style="margin-top:3rem;">
+      <div class="section-tag purple" style="margin-bottom:1rem;">Your 4-Week Action Plan</div>
+      <div class="timeline">
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot" style="border-color:var(--cyan);">📋</div>
+          <div class="timeline-body">
+            <div class="timeline-week">WEEK 1</div>
+            <div class="timeline-title">Build Your Target List</div>
+            <div class="timeline-desc">Identify 20 startups using Tracxn + Inc42. Fill your spreadsheet: company, founder name, LinkedIn profile, funding stage. Set up ContactOut and Apollo.io extensions.</div>
+          </div>
+        </div>
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot" style="border-color:var(--amber);">✉️</div>
+          <div class="timeline-body">
+            <div class="timeline-week">WEEK 2</div>
+            <div class="timeline-title">Send Your First Batch of Cold Mails</div>
+            <div class="timeline-desc">Find emails for all 20 founders/HoDs. Write personalised mails for each. Spend 30 min per mail at first — it gets faster. Send all 20 by end of week.</div>
+          </div>
+        </div>
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot" style="border-color:var(--purple);">🔄</div>
+          <div class="timeline-body">
+            <div class="timeline-week">WEEK 3</div>
+            <div class="timeline-title">Follow Up + Repeat Batch</div>
+            <div class="timeline-desc">Send one follow-up to non-responders from Week 2. Start second batch of 20 new targets. Update tracker statuses.</div>
+          </div>
+        </div>
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot" style="border-color:var(--green);">🎯</div>
+          <div class="timeline-body">
+            <div class="timeline-week">WEEK 4</div>
+            <div class="timeline-title">Interviews + Offers</div>
+            <div class="timeline-desc">By now, 3–6 companies should be in conversation. Run the interview pipeline. Negotiate offers. Continue sending new batches in parallel.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════════════ RESUME BUILDER -->
+  <section class="page-section" id="resume" style="padding-bottom:40px;">
+    <div class="section-tag amber">Build your resume</div>
+    <h2>Generate Your <span class="amber-text">LaTeX Resume</span></h2>
+    <p class="section-lead">Fill in your details below. Claude will generate a complete, recruiter-ready LaTeX resume you can paste into Overleaf and download as PDF in seconds.</p>
+
+    <div class="resume-builder">
+      <div class="builder-header">
+        <div>
+          <h3>Resume Generator</h3>
+          <div style="font-size:0.78rem;color:var(--muted);margin-top:3px;">Powered by AI — Built on the BITSian Template</div>
+        </div>
+        <div style="font-size:0.72rem;font-family:'JetBrains Mono',monospace;color:var(--cyan);background:rgba(75, 86, 148,0.08);padding:5px 10px;border-radius:4px;">LaTeX → Overleaf Ready</div>
+      </div>
+
+      <div class="builder-body">
+        <!-- FORM -->
+        <div class="builder-form">
+
+          <div class="form-section">
+            <div class="form-section-title">Personal Information</div>
+            <div class="form-row">
+              <div class="form-group"><label>Full Name *</label><input type="text"   id="f_name"    placeholder="Rahul Sharma" /></div>
+              <div class="form-group"><label>City, State</label><input type="text"   id="f_city"    placeholder="Goa, India" /></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label>Phone</label><input type="text"         id="f_phone"   placeholder="+91-9876543210" /></div>
+              <div class="form-group"><label>Email</label><input type="email"        id="f_email"   placeholder="yourname@gmail.com" /></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label>LinkedIn Username</label><input type="text" id="f_linkedin" placeholder="rahul-sharma-bits" /></div>
+              <div class="form-group"><label>GitHub Username</label><input type="text"   id="f_github"   placeholder="rahulsharmabits" /></div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <div class="form-section-title">Education</div>
+            <div class="form-row full">
+              <div class="form-group"><label>Degree + Branch</label><input type="text" id="f_degree" placeholder="B.E. Computer Science" /></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label>BITS Campus</label><input type="text" id="f_college" placeholder="BITS Pilani, Goa Campus" /></div>
+              <div class="form-group"><label>CGPA</label><input type="text"         id="f_cgpa"    placeholder="8.5" /></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label>Year &amp; Grad Date</label><input type="text" id="f_years" placeholder="Aug 2024 - May 2028" /></div>
+              <div class="form-group"><label>12th % (Board)</label><input type="text"       id="f_12th"  placeholder="95.4% - CBSE" /></div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <div class="form-section-title">Skills</div>
+            <div class="form-row full"><div class="form-group"><label>Programming Languages</label><input type="text" id="f_langs"      placeholder="Python, C++, JavaScript, Go, Java" /></div></div>
+            <div class="form-row full"><div class="form-group"><label>Frameworks &amp; Technologies</label><input type="text" id="f_frameworks" placeholder="React, Node.js, FastAPI, PostgreSQL, Docker, Git" /></div></div>
+            <div class="form-row full"><div class="form-group"><label>Developer Tools</label><input type="text" id="f_tools"      placeholder="VS Code, Postman, Figma, Linux, GitHub" /></div></div>
+          </div>
+
+          <div class="form-section">
+            <div class="form-section-title">Projects</div>
+            <div class="form-row full"><div class="form-group"><label>Project 1 Name | Tech Stack | Date</label><input type="text" id="f_p1title" placeholder="SmartBudget App | React, Node.js, MongoDB | Jan 2025" /></div></div>
+            <div class="form-row full"><div class="form-group"><label>Project 1 Description</label><textarea id="f_p1desc" placeholder="Built a personal finance tracker with real-time expense categorization using ML."></textarea></div></div>
+            <div class="form-row full"><div class="form-group"><label>Project 2 Name | Tech Stack | Date</label><input type="text" id="f_p2title" placeholder="Campus DSA Judge | Python, FastAPI, Redis | Mar 2025" /></div></div>
+            <div class="form-row full"><div class="form-group"><label>Project 2 Description</label><textarea id="f_p2desc" placeholder="Online judge platform with sandboxed code execution, supporting 5 languages."></textarea></div></div>
+          </div>
+
+          <div class="form-section">
+            <div class="form-section-title">Internship / Experience (if any)</div>
+            <div class="form-row">
+              <div class="form-group"><label>Company Name</label><input type="text" id="f_company" placeholder="StartupXYZ (or leave blank)" /></div>
+              <div class="form-group"><label>Role + Duration</label><input type="text" id="f_role"    placeholder="Software Intern | May-Jul 2025" /></div>
+            </div>
+            <div class="form-row full"><div class="form-group"><label>What you did there</label><textarea id="f_work" placeholder="Built the payment reconciliation dashboard using React + Node.js."></textarea></div></div>
+          </div>
+
+          <div class="form-section">
+            <div class="form-section-title">Certifications &amp; Extracurriculars</div>
+            <div class="form-row full"><div class="form-group"><label>Certifications (comma-separated)</label><input type="text" id="f_certs" placeholder="Python for Data Science - Coursera, React - Udemy" /></div></div>
+            <div class="form-row full"><div class="form-group"><label>Extracurricular Activity + Role</label><textarea id="f_extra" placeholder="ACM BITS Goa - Core Technical Member | Aug 2024 - Present." style="min-height:55px;"></textarea></div></div>
+          </div>
+
+          <button class="generate-btn" id="generateBtn" onclick="generateResume()">✨ Generate My LaTeX Resume</button>
+        </div>
+
+        <!-- PREVIEW -->
+        <div class="builder-preview">
+          <div class="preview-placeholder" id="previewPlaceholder">
+            <div class="icon">📄</div>
+            <p>Fill in your details and click <strong>Generate</strong> — your LaTeX resume code will appear here instantly.</p>
+            <p style="font-size:0.72rem;margin-top:8px;">Copy the code → paste into Overleaf → compile → download PDF</p>
+          </div>
+          <div class="preview-loading" id="previewLoading" style="display:none;">
+            <div class="spinner"></div>
+            <p style="font-size:0.85rem;color:var(--muted);">Generating your resume...</p>
+          </div>
+          <div id="previewContent" style="display:none;">
+            <div style="font-size:0.72rem;color:var(--muted);margin-bottom:0.75rem;font-family:'Space Grotesk',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Generated LaTeX Code</div>
+            <div class="latex-output"><pre class="preview-area" id="latexCode"></pre></div>
+            <button class="copy-btn" onclick="copyLatex()">📋 Copy LaTeX Code — Paste into Overleaf</button>
+            <div style="margin-top:1rem;padding:0.75rem;background:rgba(114, 136, 174,0.06);border:1px solid rgba(114, 136, 174,0.2);border-radius:8px;font-size:0.78rem;color:var(--muted);">
+              <strong style="color:var(--green)">How to compile:</strong> Go to overleaf.com → New Project → Blank → Paste this code → Compile → Download PDF
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Intern<span>Hunt</span></div>
+        <div class="footer-byline" style="margin-top:0.5rem;">The no-portal internship playbook for BITS Pilani students</div>
+        <div style="margin-top:1.5rem;background:linear-gradient(135deg,rgba(75, 86, 148,0.08),rgba(199, 123, 77,0.08));border:1px solid rgba(75, 86, 148,0.2);border-radius:12px;padding:1.25rem 1.5rem;display:flex;align-items:center;gap:1rem;max-width:420px;">
+          <div class="author-avatar" style="width:44px;height:44px;font-size:0.9rem;">RV</div>
+          <div>
+            <div class="author-name">Rajay Vardhan Rai</div>
+            <div class="author-id">2024A2PS1255P · BITS Pilani</div>
+            <div class="author-quote" style="margin-top:4px;">"I built this after spending 3 weeks figuring out what nobody told me. Consider this my gift to every BITSian who comes after."</div>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;gap:4rem;flex-wrap:wrap;">
+        <div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:0.78rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1rem;">Playbook</div>
+          <div class="footer-nav">
+            <a href="#process">① Full Process</a>
+            <a href="#findcompanies">② Find Companies</a>
+            <a href="#getemail">③ Get Emails</a>
+            <a href="#coldmail">④ Cold Mail</a>
+            <a href="#interview">⑤ Interview Flow</a>
+            <a href="#resume">✨ Resume Builder</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:0.78rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1rem;">Tools Used</div>
+          <div class="footer-nav">
+            <a href="https://contactout.com" target="_blank" rel="noopener">ContactOut →</a>
+            <a href="https://apollo.io"      target="_blank" rel="noopener">Apollo.io →</a>
+            <a href="https://hunter.io"      target="_blank" rel="noopener">Hunter.io →</a>
+            <a href="https://tracxn.com"     target="_blank" rel="noopener">Tracxn →</a>
+            <a href="https://inc42.com"      target="_blank" rel="noopener">Inc42 →</a>
+            <a href="https://www.overleaf.com" target="_blank" rel="noopener">Overleaf →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div style="font-size:0.78rem;color:var(--muted);font-family:'JetBrains Mono',monospace;">Made with ❤️ by Rajay Vardhan · BITS Pilani · 2025</div>
+      <div style="font-size:0.78rem;color:var(--muted);">Powered by Claude AI</div>
+    </div>
+  </footer>
+
+  <script>
+    // ─── CONFIG ─────────────────────────────────────────────────────────────────
+    const WORKER_URL = 'https://internhuntserver.chirag-bajaj-1010.workers.dev/';
+
+    // ─── PROGRESS BAR ───────────────────────────────────────────────────────────
+    window.addEventListener('scroll', () => {
+      const scrollTop  = window.scrollY;
+      const docHeight  = document.documentElement.scrollHeight - window.innerHeight;
+      const pct        = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      document.getElementById('progressBar').style.width = pct + '%';
+
+      const bt = document.getElementById('backTop');
+      scrollTop > 400 ? bt.classList.add('visible') : bt.classList.remove('visible');
+    });
+
+    // ─── MOBILE MENU ────────────────────────────────────────────────────────────
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+
+    // ─── TYPEWRITER ─────────────────────────────────────────────────────────────
+    const words = ['Startup', 'Deep Tech', 'B2B SaaS', 'Fintech', 'HealthTech', 'EdTech'];
+    let wi = 0, ci = 0, deleting = false;
+
+    function typeLoop() {
+      const el   = document.getElementById('typewriter');
+      if (!el) return;
+      const word = words[wi];
+
+      if (!deleting) {
+        el.textContent = word.slice(0, ci + 1);
+        ci++;
+        if (ci === word.length) { deleting = true; setTimeout(typeLoop, 1800); return; }
+      } else {
+        el.textContent = word.slice(0, ci - 1);
+        ci--;
+        if (ci === 0) { deleting = false; wi = (wi + 1) % words.length; }
+      }
+      setTimeout(typeLoop, deleting ? 60 : 110);
+    }
+    typeLoop();
+
+    // ─── START JOURNEY ──────────────────────────────────────────────────────────
+    function startJourney() {
+      document.getElementById('heroContent').classList.add('revealed');
+      document.getElementById('startBtn').style.display = 'none';
+
+      // Animate counters
+      document.querySelectorAll('.hero-stat .num[data-count]').forEach(el => {
+        const target = parseInt(el.dataset.count);
+        const suffix = el.dataset.suffix || '';
+        let current  = 0;
+        const step   = Math.ceil(target / 30);
+        const timer  = setInterval(() => {
+          current = Math.min(current + step, target);
+          el.textContent = current + suffix;
+          if (current >= target) clearInterval(timer);
+        }, 40);
+      });
+
+      setTimeout(() => {
+        document.getElementById('process').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 500);
+    }
+
+    // ─── FADE IN ON SCROLL ──────────────────────────────────────────────────────
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // ─── STEP ACCORDION ─────────────────────────────────────────────────────────
+    function toggleStep(el) {
+      const wasActive = el.classList.contains('active');
+      document.querySelectorAll('.step-item').forEach(s => s.classList.remove('active'));
+      if (!wasActive) el.classList.add('active');
+    }
+    const steps = document.querySelectorAll('.step-item');
+    if (steps.length) steps[0].classList.add('active');
+
+    // ─── COMPANY FILTER ─────────────────────────────────────────────────────────
+    function filterCompanies(cat, btn) {
+      document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.company-card').forEach(card => {
+        (cat === 'all' || card.dataset.cat === cat)
+          ? card.classList.remove('hidden')
+          : card.classList.add('hidden');
+      });
+    }
+
+    // ─── PIPELINE ───────────────────────────────────────────────────────────────
+    const pipelineData = {
+      mail: {
+        title: '✉️ Stage 1 — Your Cold Mail (Day 1)',
+        items: [
+          { q: 'What should the subject line be?',    a: '"CS Undergrad @ BITS — Quick idea for [specific product/feature]" — specific, not generic. The product name in the subject line alone gets more opens.' },
+          { q: 'Who exactly should I send it to?',    a: 'Founder directly for companies under 50 people. Head of Engineering / Product for 50–200 people. Never send to a generic careers@ or info@ address.' },
+          { q: 'What happens after I send?',          a: 'If your mail is good, the founder will forward it to their HR with a note like "chat with this person." This is the best possible outcome — now you have an internal champion.' },
+          { q: 'When should I follow up?',            a: 'If no reply in 5–7 days, send one follow-up: "Following up on my email — still happy to share the spec if useful." One follow-up only. Never more.' },
+        ],
+      },
+      connect: {
+        title: '🤝 Stage 2 — Founder Connects to HR (Day 2–5)',
+        items: [
+          { q: 'What does this look like?',                            a: 'The founder forwards your email to their HR with a short note: "Interesting candidate — set up a quick call." You\'ll get an email from HR within 2–3 days.' },
+          { q: 'What should I do while waiting?',                      a: 'Prepare your 60-second pitch. Read every blog post the company has published in the last 3 months. Re-read your cold mail — HR will have it in front of them.' },
+          { q: 'What if HR contacts me directly without the founder?', a: 'Still great — it means your mail reached the right person. Treat it the same way.' },
+        ],
+      },
+      hr: {
+        title: '📞 Stage 3 — HR Screening Call (Day 6–10, 15–30 min)',
+        items: [
+          { q: 'What will HR ask?',               a: '"Tell me about yourself" (have a 60-sec pitch), "Why this company?" (use your cold mail research!), "What do you know about our product?", "When are you available?", "Stipend expectations?"' },
+          { q: 'What is HR actually evaluating?', a: 'Communication clarity, energy and enthusiasm, whether you\'re sane to work with, and a rough stipend range. It\'s a culture fit + logistics call — not a technical one.' },
+          { q: 'Should I negotiate stipend here?',a: 'Give a range if asked. Say "Based on my research and the role, I\'m looking at ₹X–₹Y range." Never give your floor — always anchor high.' },
+        ],
+      },
+      tech: {
+        title: '💻 Stage 4 — Technical Round with HoD (Day 12–16, 60–90 min)',
+        items: [
+          { q: 'What will the technical round look like?', a: '1–2 LeetCode medium problems (arrays, strings, trees, graphs). A system design question. Deep dive into every project on your resume.' },
+          { q: 'What should I prepare?',                   a: 'LeetCode: Blind 75 list — focus on arrays, hashmap, two-pointer, BFS/DFS. Know your projects inside-out: what did YOU personally build, what problems did you solve?' },
+          { q: 'Will they look at my cold mail spec?',     a: 'Almost certainly. If you attached a spec or doc to your cold mail, the HoD has read it. Be ready to walk them through your thinking.' },
+        ],
+      },
+      offer: {
+        title: '💰 Stage 5 — Offer + Negotiation (Day 18–22)',
+        items: [
+          { q: 'What stipend should I expect as a fresher?',    a: 'First-year BITSians at good startups: ₹15K–₹25K/month. Second-year with projects: ₹20K–₹35K/month. If you have a competing offer, mention it — politely.' },
+          { q: 'How do I negotiate without being awkward?',     a: '"Thank you for the offer — I\'m excited about this role. I have a competing offer at ₹X — is there any flexibility on the stipend? I\'m very committed to joining here."' },
+          { q: 'Should I get the offer in writing?',            a: 'Always. Get an offer letter or at minimum an email confirming: company name, role, stipend amount, start date, duration. Do not resign from alternatives until you have this.' },
+        ],
+      },
+    };
+
+    function showStage(el, stage) {
+      document.querySelectorAll('.pipeline-node').forEach(n => n.classList.remove('active'));
+      el.classList.add('active');
+      const d = pipelineData[stage];
+      document.getElementById('pipelinePanel').innerHTML =
+        '<h4>' + d.title + '</h4>' +
+        d.items.map(i =>
+          '<div class="pipeline-qa">' +
+            '<div class="pipeline-q">' + i.q + '</div>' +
+            '<div class="pipeline-a">' + i.a + '</div>' +
+          '</div>'
+        ).join('');
+    }
+    showStage(document.querySelector('.pipeline-node'), 'mail');
+
+    // ─── TRACKER ────────────────────────────────────────────────────────────────
+    const STATUSES     = ['target', 'emailed', 'replied', 'interview', 'offer'];
+    const STATUS_LABELS = {
+      target:    '📌 Targeted',
+      emailed:   '✉️ Emailed',
+      replied:   '💬 Replied',
+      interview: '💻 Interview',
+      offer:     '🎉 Offer!',
+    };
+    let companies = JSON.parse(localStorage.getItem('internhunt_companies') || '[]');
+
+    function saveCompanies() {
+      localStorage.setItem('internhunt_companies', JSON.stringify(companies));
+    }
+
+    function renderTracker() {
+      const list = document.getElementById('trackerList');
+      if (!companies.length) {
+        list.innerHTML = '<div class="tracker-empty">No companies yet. Add your first target above ↑</div>';
+      } else {
+        list.innerHTML = companies.map((c, i) =>
+          '<div class="tracker-row">' +
+            '<span style="color:var(--text);font-size:0.83rem;">' + c.name + '</span>' +
+            '<span class="tracker-status status-' + c.status + '" onclick="cycleStatus(' + i + ')">' + STATUS_LABELS[c.status] + '</span>' +
+            '<button class="tracker-del" onclick="deleteCompany(' + i + ')">✕</button>' +
+          '</div>'
+        ).join('');
+      }
+      const stats = STATUSES.reduce((acc, s) => {
+        acc[s] = companies.filter(c => c.status === s).length;
+        return acc;
+      }, {});
+      document.getElementById('trackerStats').innerHTML = Object.entries(stats)
+        .filter(([, v]) => v > 0)
+        .map(([k, v]) => '<div class="tracker-stat-pill"><b>' + v + '</b> ' + STATUS_LABELS[k] + '</div>')
+        .join('');
+    }
+
+    function addCompany() {
+      const input = document.getElementById('trackerInput');
+      const name  = input.value.trim();
+      if (!name) return;
+      companies.push({ name, status: 'target' });
+      saveCompanies();
+      renderTracker();
+      input.value = '';
+    }
+
+    function cycleStatus(i) {
+      const cur = STATUSES.indexOf(companies[i].status);
+      companies[i].status = STATUSES[(cur + 1) % STATUSES.length];
+      saveCompanies();
+      renderTracker();
+    }
+
+    function deleteCompany(i) {
+      companies.splice(i, 1);
+      saveCompanies();
+      renderTracker();
+    }
+
+    renderTracker();
+
+    // ─── SHARED API CALL ────────────────────────────────────────────────────────
+    async function callClaude(messages, maxTokens = 1000) {
+      const response = await fetch(WORKER_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          model:      'claude-sonnet-4-6',
+          max_tokens: maxTokens,
+          messages,
+        }),
+      });
+      const data = await response.json();
+      if (data.error) throw new Error(data.error.message || 'API error');
+      return data.content.map(i => i.text || '').join('').trim();
+    }
+
+    // ─── AI EMAIL GENERATOR ─────────────────────────────────────────────────────
+    async function generateEmail() {
+      const btn     = document.getElementById('emailGenBtn');
+      const loading = document.getElementById('emailGenLoading');
+      const output  = document.getElementById('emailOutput');
+      const copyBtn = document.getElementById('emailCopyBtn');
+
+      const name        = document.getElementById('eg_name').value        || 'Your Name';
+      const branch      = document.getElementById('eg_branch').value      || 'CS, 2nd Year';
+      const company     = document.getElementById('eg_company').value     || 'the startup';
+      const founder     = document.getElementById('eg_founder').value     || 'the founder';
+      const observation = document.getElementById('eg_observation').value || 'I noticed an interesting gap in your product';
+      const skill       = document.getElementById('eg_skill').value       || 'relevant project experience';
+      const stack       = document.getElementById('eg_stack').value       || 'your tech stack';
+
+      btn.disabled = true;
+      loading.style.display = 'flex';
+      output.classList.remove('visible');
+      copyBtn.classList.remove('visible');
+      output.style.color = '#EAE0CF';
+
+      const prompt = `You are an expert at writing high-converting cold emails for student internship applications. Write a cold email for the following student:
+
+Student: ${name}, ${branch}, BITS Pilani
+Target: ${company}, reaching out to ${founder}
+Product observation: ${observation}
+Their skill/project: ${skill}
+Company's tech stack: ${stack}
+
+Write a cold email that is:
+- Under 180 words
+- Hyper-personalised with the specific observation
+- Has a compelling subject line
+- Follows the structure: brief intro → specific product observation → why them + why now → concrete offer (mention they can share a 2-page spec) → low-friction CTA (20-min call OR just send spec)
+- Professional but conversational, not corporate
+- Ends with: name, BITS Pilani | branch | GitHub placeholder | phone placeholder
+
+Return ONLY the email starting with "Subject:" — no preamble, no explanation.`;
+
+      try {
+        const text    = await callClaude([{ role: 'user', content: prompt }]);
+        output.textContent = text;
+        output.classList.add('visible');
+        copyBtn.classList.add('visible');
+      } catch (err) {
+        output.textContent = 'Generation failed: ' + err.message;
+        output.style.color = 'var(--amber)';
+        output.classList.add('visible');
+      }
+
+      loading.style.display = 'none';
+      btn.disabled = false;
+    }
+
+    function copyEmail() {
+      const text = document.getElementById('emailOutput').textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.getElementById('emailCopyBtn');
+        btn.textContent = '✅ Copied!';
+        setTimeout(() => { btn.textContent = '📋 Copy Email Draft'; }, 2500);
+      });
+    }
+
+    // ─── RESUME GENERATOR ───────────────────────────────────────────────────────
+    async function generateResume() {
+      const btn         = document.getElementById('generateBtn');
+      const placeholder = document.getElementById('previewPlaceholder');
+      const loading     = document.getElementById('previewLoading');
+      const content     = document.getElementById('previewContent');
+
+      const name       = document.getElementById('f_name').value       || 'Your Name';
+      const city       = document.getElementById('f_city').value       || 'City, State';
+      const phone      = document.getElementById('f_phone').value      || '+91-9999999999';
+      const email      = document.getElementById('f_email').value      || 'yourname@gmail.com';
+      const linkedin   = document.getElementById('f_linkedin').value   || 'yourid';
+      const github     = document.getElementById('f_github').value     || 'yourid';
+      const degree     = document.getElementById('f_degree').value     || 'B.E. Computer Science';
+      const college    = document.getElementById('f_college').value    || 'BITS Pilani, Goa Campus';
+      const cgpa       = document.getElementById('f_cgpa').value       || '8.5';
+      const years      = document.getElementById('f_years').value      || 'Aug 2024 -- May 2028';
+      const twelfth    = document.getElementById('f_12th').value       || '95% - CBSE';
+      const langs      = document.getElementById('f_langs').value      || 'Python, C++, JavaScript';
+      const frameworks = document.getElementById('f_frameworks').value || 'React, Node.js, Docker';
+      const tools      = document.getElementById('f_tools').value      || 'VS Code, Git, Linux';
+      const p1title    = document.getElementById('f_p1title').value    || 'Project Name | Tech Stack | Jan 2025';
+      const p1desc     = document.getElementById('f_p1desc').value     || 'Description of project 1.';
+      const p2title    = document.getElementById('f_p2title').value    || 'Project Name 2 | Tech Stack | Mar 2025';
+      const p2desc     = document.getElementById('f_p2desc').value     || 'Description of project 2.';
+      const company    = document.getElementById('f_company').value;
+      const role       = document.getElementById('f_role').value       || 'Software Intern | May-Jul 2025';
+      const work       = document.getElementById('f_work').value       || 'Built features.';
+      const certs      = document.getElementById('f_certs').value      || 'Python for Data Science - Coursera';
+      const extra      = document.getElementById('f_extra').value      || '';
+
+      btn.disabled    = true;
+      btn.textContent = '⏳ Generating...';
+      placeholder.style.display = 'none';
+      loading.style.display     = 'flex';
+      content.style.display     = 'none';
+
+      const prompt = `You are a LaTeX resume generator. Generate a complete, compilable LaTeX resume. Return ONLY the raw LaTeX code, no explanation, no markdown, no backticks.
+
+Student Details:
+- Name: ${name}
+- City: ${city}
+- Phone: ${phone}
+- Email: ${email}
+- LinkedIn: ${linkedin}
+- GitHub: ${github}
+- Degree: ${degree}
+- College: ${college}
+- CGPA: ${cgpa}
+- Duration: ${years}
+- 12th: ${twelfth}
+- Languages: ${langs}
+- Frameworks: ${frameworks}
+- Tools: ${tools}
+- Project 1: ${p1title} | ${p1desc}
+- Project 2: ${p2title} | ${p2desc}
+${company ? `- Company: ${company} | Role: ${role} | Work: ${work}` : '- No internship experience yet'}
+- Certifications: ${certs}
+- Extracurricular: ${extra || 'None'}
+
+Use a clean, professional LaTeX resume format with sections for: Personal Info/Header, Education, Skills, Projects, Experience (if company provided), Certifications, and Extracurriculars. Use \\documentclass[letterpaper,11pt]{article}, standard margins, and clean formatting. Make all bullet points strong, action-verb-led, and quantified where possible.
+
+Return ONLY LaTeX code. Start with \\documentclass`;
+
+      try {
+        let latex = await callClaude([{ role: 'user', content: prompt }], 4000);
+        latex = latex.replace(/```latex/g, '').replace(/```/g, '').trim();
+        document.getElementById('latexCode').textContent = latex;
+        loading.style.display = 'none';
+        content.style.display = 'block';
+      } catch (err) {
+        loading.style.display     = 'none';
+        placeholder.style.display = 'flex';
+        placeholder.innerHTML     = '<div class="icon">⚠️</div><p style="color:var(--amber)">Error: ' + err.message + '</p>';
+      }
+
+      btn.disabled    = false;
+      btn.textContent = '✨ Generate My LaTeX Resume';
+    }
+
+    function copyLatex() {
+      const code = document.getElementById('latexCode').textContent;
+      navigator.clipboard.writeText(code).then(() => {
+        const btn = document.querySelector('.copy-btn');
+        btn.textContent = '✅ Copied! Paste into Overleaf now';
+        setTimeout(() => { btn.textContent = '📋 Copy LaTeX Code — Paste into Overleaf'; }, 3000);
+      });
+    }
+
+    // ─── SMOOTH SCROLL ──────────────────────────────────────────────────────────
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    });
+  </script>
+</body>
+</html>
