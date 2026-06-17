@@ -137,14 +137,12 @@ Cloudflare automatically provisions a public endpoint and global edge deployment
 InternHunt/
 ├── index.html             # Main application page
 ├── styles.css             # Application styling
-├── script.js              # Frontend logic and API communication
 ├── image-modal.js         # Image lightbox functionality
-├── worker/
-│   ├── server.js          # Cloudflare Worker backend
-│   └── wrangler.toml
+├── worker.js              # Backend worker source code(gitignored)
 ├── assets/
-│   ├── images/
-│   └── icons/
+│   ├── coldmail1.jpeg
+│   ├── coldmail2.jpeg
+│   └── coldmail3.jpeg
 └── README.md
 ```
 
