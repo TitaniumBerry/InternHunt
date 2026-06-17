@@ -12,7 +12,7 @@ A founder-focused internship platform that helps students discover opportunities
 
 ## Live Demo
 
-https://internhunt.pages.dev
+[https://internhunt.pages.dev](https://internhunt-1yo.pages.dev/)
 
 ---
 
