@@ -170,17 +170,17 @@ Applications & Responses
 
 ## Contributors
 
-### Rajay Vardhan Rai
-
-2024A2PS1255P · BITS Pilani, Pilani Campus
-
-Created the original internship outreach framework, cold-email templates, resource collection, and founder-focused internship strategy that powers InternHunt.
-
 ### Chirag Bajaj
 
 2025B5PS1320P · BITS Pilani, Pilani Campus
 
 Built the backend infrastructure, deployment pipeline, platform integration, UI improvements, hosting architecture, and technical systems powering InternHunt.
+
+### Rajay Vardhan Rai
+
+2024A2PS1255P · BITS Pilani, Pilani Campus
+
+Created the original internship outreach framework, cold-email templates, resource collection, and founder-focused internship strategy that powers InternHunt.
 
 ---
 
