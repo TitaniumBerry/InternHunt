@@ -1216,7 +1216,7 @@ h2 {
 .info-card .num {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 2rem;
-    font-weight: 700
+    font-weight: 700;
     color: var(--warn);
     display: block;
 }
@@ -1240,7 +1240,7 @@ h2 {
 }
 .builder-header h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 600; }
 .builder-body {
-    display: grid
+    display: grid;
     grid-template-columns: 1fr 1fr;
 }
 .builder-form {
@@ -1251,7 +1251,7 @@ h2 {
 }
 .builder-preview {
     padding: 1.5rem;
-    overflow-y: auto
+    overflow-y: auto;
     max-height: 700px;
     background: var(--bg);
 }
@@ -1261,116 +1261,116 @@ h2 {
 }
 .form-section { margin-bottom: 2rem; }
 .form-section-title {
-    font-family: 'Space Grotesk', sans-serif
-    font-size: 0.78rem
-    font-weight: 600
-    color: var(--accent)
-    text-transform: uppercase
-    letter-spacing: 0.08em
-    margin-bottom: 1rem
-    padding-bottom: 6px
-    border-bottom: 1px solid var(--border)
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
 }
 .form-row {
-    display: grid
-    grid-template-columns: 1fr 1fr
-    gap: 1rem
-    margin-bottom: 1rem
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
 }
 .form-row.full { grid-template-columns: 1fr; }
 .form-group { display: flex; flex-direction: column; gap: 5px; }
 .form-group label {
-    font-size: 0.75rem
-    color: var(--muted)
-    font-family: 'Space Grotesk', sans-serif
-    font-weight: 500
+    font-size: 0.75rem;
+    color: var(--muted);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
 }
 .form-group input,
 .form-group textarea {
-    background: var(--bg)
-    border: 1px solid var(--border)
-    border-radius: var(--radius-sm)
-    padding: 8px 12px
-    color: var(--text)
-    font-family: 'Inter', sans-serif
-    font-size: 0.85rem
-    outline: none
-    transition: border-color var(--trans)
-    width: 100%
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 8px 12px;
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    outline: none;
+    transition: border-color var(--trans);
+    width: 100%;
 }
 .form-group input:focus,
 .form-group textarea:focus { border-color: var(--accent); }
 .form-group textarea { resize: vertical; min-height: 70px; }
 .generate-btn {
-    width: 100%
-    padding: 14px
-    background: var(--accent)
-    color: var(--bg)
-    font-family: 'Space Grotesk', sans-serif
-    font-weight: 700
-    font-size: 1rem
-    border: none
-    border-radius: var(--radius-md)
-    cursor: pointer
-    margin-top: 1rem
-    transition: background var(--trans), transform var(--trans)
+    width: 100%;
+    padding: 14px;
+    background: var(--accent);
+    color: var(--bg);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background var(--trans), transform var(--trans);
 }
 .generate-btn:hover    { background: var(--accent-2); transform: translateY(-1px); }
 .generate-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 .preview-area {
-    font-family: 'JetBrains Mono', monospace
-    font-size: 0.72rem
-    color: var(--muted)
-    line-height: 1.8
-    white-space: pre-wrap
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--muted);
+    line-height: 1.8;
+    white-space: pre-wrap;
 }
 .preview-loading {
-    display: flex
-    flex-direction: column
-    align-items: center
-    justify-content: center
-    height: 300px
-    gap: 1rem
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    gap: 1rem;
 }
 .spinner {
-    width: 40px; height: 40px
-    border-radius: 50%
-    border: 3px solid var(--border)
-    border-top-color: var(--accent)
-    animation: spin 0.8s linear infinite
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    border: 3px solid var(--border);
+    border-top-color: var(--accent);
+    animation: spin 0.8s linear infinite;
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 .preview-placeholder {
-    display: flex
-    flex-direction: column
-    align-items: center
-    justify-content: center
-    height: 300px
-    text-align: center
-    gap: 0.75rem
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    text-align: center;
+    gap: 0.75rem;
 }
 .preview-placeholder .icon { font-size: 2.5rem; opacity: 0.3; }
 .preview-placeholder p    { font-size: 0.82rem; color: var(--muted-2); max-width: 240px; }
 .latex-output {
-    background: var(--bg-alt)
-    border: 1px solid var(--border)
-    border-radius: var(--radius-md)
-    padding: 1rem
-    overflow-x: auto
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    overflow-x: auto;
 }
 .copy-btn {
-    margin-top: 1rem
-    padding: 8px 16px
-    background: var(--bg-alt)
-    border: 1px solid var(--border)
-    border-radius: var(--radius-sm)
-    color: var(--accent)
-    font-family: 'Space Grotesk', sans-serif
-    font-weight: 600
-    font-size: 0.8rem
-    cursor: pointer
-    transition: all var(--trans)
-    width: 100%
+    margin-top: 1rem;
+    padding: 8px 16px;
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--accent);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all var(--trans);
+    width: 100%;
 }
 .copy-btn:hover { background: var(--accent); color: var(--bg); border-color: var(--accent); }
 
@@ -1387,7 +1387,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-6) var(--space-8);
-    justify-content: center;          /* ← center the group */
+    justify-content: center;
     margin-bottom: 2rem;
 }
 
@@ -1396,14 +1396,14 @@ footer {
     display: flex;
     flex-direction: column;
     gap: var(--space-4);
-    max-width: 420px;                 /* matches your inline max-width */
+    max-width: 420px;
 }
 
 /* Right column: Playbook + Tools */
 .footer-top > div:last-child {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--space-8);              /* replaces your inline gap:4rem */
+    gap: var(--space-8);
 }
 
 /* Each nav block (Playbook / Tools) */
@@ -1412,7 +1412,7 @@ footer {
     flex-direction: column;
     gap: var(--space-2);
 }
-.footer-top .footer-nav > div:first-child {  /* the "Playbook" / "Tools Used" heading */
+.footer-top .footer-nav > div:first-child {
     font-family: 'Space Grotesk', sans-serif;
     font-size: var(--fs-xs);
     font-weight: 700;
@@ -1429,7 +1429,7 @@ footer {
 }
 .footer-top .footer-nav a:hover { color: var(--accent); }
 
-/* Creator cards — override your inline gradient/border with new palette */
+/* Creator cards — override inline gradient/border with new palette */
 .footer-top .author-card-inline {
     background: var(--bg-alt);
     border: 1px solid var(--border);
@@ -1490,33 +1490,33 @@ footer {
 
 /* ─── IMAGE MODAL ─── */
 .image-modal {
-    display: none
-    position: fixed
-    inset: 0
-    z-index: 9999
-    background: rgba(0, 0, 0, 0.85)
-    justify-content: center
-    align-items: center
-    padding: 2rem
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
 }
 .image-modal.active { display: flex; }
 .modal-image {
-    max-width: 90vw
-    max-height: 90vh
-    border-radius: var(--radius-md)
-    box-shadow: 0 0 0 1px var(--border)
-    animation: zoomIn 0.2s ease
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: var(--radius-md);
+    box-shadow: 0 0 0 1px var(--border);
+    animation: zoomIn 0.2s ease;
 }
 .modal-close {
-    position: absolute
-    top: 20px
-    right: 30px
-    font-size: 40px
-    cursor: pointer
-    color: var(--bg)
-    opacity: 0.6
-    user-select: none
-    transition: opacity var(--trans)
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    cursor: pointer;
+    color: var(--bg);
+    opacity: 0.6;
+    user-select: none;
+    transition: opacity var(--trans);
 }
 .modal-close:hover { opacity: 1; }
 @keyframes zoomIn {
