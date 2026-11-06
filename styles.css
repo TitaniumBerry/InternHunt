@@ -1376,58 +1376,109 @@ h2 {
 
 /* ─── FOOTER ─── */
 footer {
-    border-top: 1px solid var(--border)
-    padding: 4rem var(--pad-x) 3rem
-    max-width: var(--max-w)
-    margin: 0 auto
-}
-.footer-top {
-    display: flex
-    align-items: flex-start
-    justify-content: space-between
-    gap: 2rem
-    flex-wrap: wrap
-    margin-bottom: 2rem
-}
-.footer-nav { display: flex; flex-direction: column; gap: 0.6rem; }
-.footer-nav a {
-    color: var(--muted)
-    text-decoration: none
-    font-size: 0.83rem
-    font-family: 'Space Grotesk', sans-serif
-    transition: color var(--trans)
-}
-.footer-nav a:hover { color: var(--accent); }
-.footer-logo  { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.4rem; color: var(--accent); margin-bottom: 0.5rem; }
-.footer-logo span { color: var(--warn); }
-.footer-byline { font-size: 0.82rem; color: var(--muted); }
-.footer-bottom {
-    border-top: 1px solid var(--border)
-    padding-top: 1.5rem
-    display: flex
-    align-items: center
-    justify-content: space-between
-    flex-wrap: wrap
-    gap: 1rem
-    font-size: 0.78rem
-    color: var(--muted-2)
-    font-family: 'JetBrains Mono', monospace
+    border-top: 1px solid var(--border);
+    padding: 4rem var(--pad-x) 3rem;
+    max-width: var(--max-w);
+    margin: 0 auto;
 }
 
-/* ─── RESPONSIVE ─── */
+/* Top row — two columns, centered together, not spaced apart */
+.footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-6) var(--space-8);
+    justify-content: center;          /* ← center the group */
+    margin-bottom: 2rem;
+}
+
+/* Left column: logo + byline + creator cards */
+.footer-top > div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    max-width: 420px;                 /* matches your inline max-width */
+}
+
+/* Right column: Playbook + Tools */
+.footer-top > div:last-child {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-8);              /* replaces your inline gap:4rem */
+}
+
+/* Each nav block (Playbook / Tools) */
+.footer-top .footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+.footer-top .footer-nav > div:first-child {  /* the "Playbook" / "Tools Used" heading */
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: var(--space-2);
+}
+.footer-top .footer-nav a {
+    color: var(--muted);
+    font-size: var(--fs-sm);
+    font-family: 'Space Grotesk', sans-serif;
+    transition: color var(--trans);
+}
+.footer-top .footer-nav a:hover { color: var(--accent); }
+
+/* Creator cards — override your inline gradient/border with new palette */
+.footer-top .author-card-inline {
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-4) var(--space-5);
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    max-width: 420px;
+}
+.footer-top .author-card-inline .author-avatar {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--bg);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Space Grotesk', sans-serif; font-weight: 800; font-size: var(--fs-sm);
+}
+.footer-top .author-card-inline .author-name {
+    font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: var(--fs-base);
+}
+.footer-top .author-card-inline .author-id {
+    font-family: 'JetBrains Mono', monospace; font-size: var(--fs-xs); color: var(--muted-2);
+}
+.footer-top .author-card-inline .author-quote {
+    font-size: var(--fs-sm); color: var(--muted); margin-top: 2px; line-height: var(--line-loose); font-style: italic;
+}
+
+/* Footer bottom */
+.footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--border);
+    font-size: var(--fs-xs);
+    color: var(--muted-2);
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* ─── RESPONSIVE FOOTER ─── */
 @media (max-width: 768px) {
-    .nav-links    { display: none; }
-    .nav-hamburger { display: flex; }
-    .tool-showcase { grid-template-columns: 1fr; }
-    .builder-body  { grid-template-columns: 1fr; }
-    .builder-form  { border-right: none; border-bottom: 1px solid var(--border); }
-    .flow-container { flex-direction: column; align-items: flex-start; }
-    .flow-arrow     { transform: rotate(90deg); }
-    .form-row       { grid-template-columns: 1fr; }
-    .email-gen-fields { grid-template-columns: 1fr; }
-    .footer-top    { flex-direction: column; }
-    .proof-images  { grid-template-columns: 1fr; }
-    .hero-author-card { flex-direction: column; text-align: center; }
+    .footer-top { flex-direction: column; align-items: center; text-align: center; }
+    .footer-top > div:first-child { max-width: 100%; align-items: center; }
+    .footer-top > div:last-child { justify-content: center; }
+    .footer-top .author-card-inline { flex-direction: column; text-align: center; }
+    .footer-bottom { flex-direction: column; text-align: center; }
 }
 @media (max-width: 480px) {
     .hero h1      { font-size: 2.2rem; }
