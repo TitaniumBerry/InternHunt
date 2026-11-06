@@ -1375,133 +1375,34 @@ h2 {
 .copy-btn:hover { background: var(--accent); color: var(--bg); border-color: var(--accent); }
 
 /* ─── FOOTER ─── */
-footer {
-    border-top: 1px solid var(--border);
-    padding: 4rem var(--pad-x) 3rem;
-    max-width: var(--max-w);
-    margin: 0 auto;
-}
+footer { border-top: 1px solid var(--border); padding: 4rem var(--pad-x) 3rem; max-width: var(--max-w); margin: 0 auto; }
 
-/* Top row — two columns with generous breathing room */
-.footer-top {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--space-10) var(--space-12);   /* row gap 6rem, column gap 4.5rem */
-    margin-bottom: 2rem;
-}
+.footer-top { display: flex; flex-wrap: wrap; justify-content: center; gap: 4.5rem 6rem; margin-bottom: 2rem; }
 
-/* LEFT COLUMN: logo + byline + creator cards */
-.footer-top > div:first-child {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-6);                     /* ← space between logo/byline/cards */
-    max-width: 420px;
-    margin-right: var(--space-8);            /* ← pushes left column further left */
-}
+.footer-left { display: flex; flex-direction: column; gap: 2.5rem; max-width: 420px; margin-right: 3rem; }
+.footer-left .author-card-inline + .author-card-inline { margin-top: 2.5rem; }
 
-/* Creator cards — extra space between them */
-.footer-top > div:first-child .author-card-inline {
-    margin-top: var(--space-5);              /* ← gap between the two cards */
-}
-.footer-top > div:first-child .author-card-inline:first-child {
-    margin-top: 0;                           /* first card no extra top */
-}
+.footer-right { display: flex; flex-wrap: wrap; gap: 3.5rem; margin-left: 3rem; margin-top: 2.5rem; }
 
-/* RIGHT COLUMN: Playbook + Tools */
-.footer-top > div:last-child {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-10);                    /* ← space between Playbook & Tools blocks */
-    margin-left: var(--space-8);             /* ← pushes right column further right */
-    margin-top: var(--space-6);              /* ← drops it lower (2.5rem) */
-}
+.footer-nav { display: flex; flex-direction: column; gap: 0.75rem; }
+.footer-nav-title { font-family: 'Space Grotesk', sans-serif; font-size: var(--fs-xs); font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; }
+.footer-nav a { color: var(--muted); font-size: var(--fs-sm); font-family: 'Space Grotesk', sans-serif; transition: color var(--trans); }
+.footer-nav a:hover { color: var(--accent); }
 
-/* Each nav block (Playbook / Tools) */
-.footer-top .footer-nav {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-2);
-}
-.footer-top .footer-nav > div:first-child {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: var(--fs-xs);
-    font-weight: 700;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: var(--space-2);
-}
-.footer-top .footer-nav a {
-    color: var(--muted);
-    font-size: var(--fs-sm);
-    font-family: 'Space Grotesk', sans-serif;
-    transition: color var(--trans);
-}
-.footer-top .footer-nav a:hover { color: var(--accent); }
+.author-card-inline { background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius-md); padding: var(--space-4) var(--space-5); display: flex; align-items: center; gap: var(--space-3); max-width: 420px; }
+.author-card-inline .author-avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: var(--bg); display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 800; font-size: var(--fs-sm); }
+.author-card-inline .author-name { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: var(--fs-base); }
+.author-card-inline .author-id { font-family: 'JetBrains Mono', monospace; font-size: var(--fs-xs); color: var(--muted-2); }
+.author-card-inline .author-quote { font-size: var(--fs-sm); color: var(--muted); margin-top: 2px; line-height: var(--line-loose); font-style: italic; }
 
-/* Creator cards — clean palette */
-.footer-top .author-card-inline {
-    background: var(--bg-alt);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    padding: var(--space-4) var(--space-5);
-    display: flex;
-    align-items: center;
-    gap: var(--space-3);
-    max-width: 420px;
-}
-.footer-top .author-card-inline .author-avatar {
-    width: 44px; height: 44px;
-    border-radius: 50%;
-    background: var(--accent);
-    color: var(--bg);
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Space Grotesk', sans-serif; font-weight: 800; font-size: var(--fs-sm);
-}
-.footer-top .author-card-inline .author-name {
-    font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: var(--fs-base);
-}
-.footer-top .author-card-inline .author-id {
-    font-family: 'JetBrains Mono', monospace; font-size: var(--fs-xs); color: var(--muted-2);
-}
-.footer-top .author-card-inline .author-quote {
-    font-size: var(--fs-sm); color: var(--muted); margin-top: 2px; line-height: var(--line-loose); font-style: italic;
-}
+.footer-bottom { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-3); padding-top: var(--space-4); border-top: 1px solid var(--border); font-size: var(--fs-xs); color: var(--muted-2); font-family: 'JetBrains Mono', monospace; }
 
-/* Footer bottom */
-.footer-bottom {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-3);
-    padding-top: var(--space-4);
-    border-top: 1px solid var(--border);
-    font-size: var(--fs-xs);
-    color: var(--muted-2);
-    font-family: 'JetBrains Mono', monospace;
-}
-
-/* ─── RESPONSIVE FOOTER ─── */
 @media (max-width: 768px) {
-    .footer-top {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: var(--space-8);                 /* vertical stack gap on mobile */
-    }
-    .footer-top > div:first-child,
-    .footer-top > div:last-child {
-        margin: 0;
-        max-width: 100%;
-        align-items: center;
-    }
-    .footer-top > div:last-child { margin-top: 0; }
-    .footer-top > div:first-child .author-card-inline { margin-top: var(--space-4); }
-    .footer-top > div:first-child .author-card-inline:first-child { margin-top: 0; }
-    .footer-top .author-card-inline { flex-direction: column; text-align: center; }
-    .footer-bottom { flex-direction: column; text-align: center; }
+  .footer-top { flex-direction: column; align-items: center; text-align: center; gap: 3rem; }
+  .footer-left, .footer-right { margin: 0; max-width: 100%; }
+  .footer-left .author-card-inline + .author-card-inline { margin-top: 1.5rem; }
+  .author-card-inline { flex-direction: column; text-align: center; }
+  .footer-bottom { flex-direction: column; text-align: center; }
 }
 @media (max-width: 480px) {
     .hero h1      { font-size: 2.2rem; }
