@@ -805,7 +805,7 @@
     </div>
   </footer>
 
-  <script>
+    <script>
     // ─── CONFIG ─────────────────────────────────────────────────────────────────
     const WORKER_URL = 'https://internhuntserver.chirag-bajaj-1010.workers.dev/';
 
@@ -852,7 +852,6 @@
       document.getElementById('heroContent').classList.add('revealed');
       document.getElementById('startBtn').style.display = 'none';
 
-      // Animate counters
       document.querySelectorAll('.hero-stat .num[data-count]').forEach(el => {
         const target = parseInt(el.dataset.count);
         const suffix = el.dataset.suffix || '';
@@ -882,7 +881,8 @@
       document.querySelectorAll('.step-item').forEach(s => s.classList.remove('active'));
       if (!wasActive) el.classList.add('active');
     }
-    const steps = document.query.querySelectorAll('.step-item');
+    // FIXED: document.query → document
+    const steps = document.querySelectorAll('.step-item');
     if (steps.length) steps[0].classList.add('active');
 
     // ─── COMPANY FILTER ─────────────────────────────────────────────────────────
@@ -896,7 +896,7 @@
       });
     }
 
-    // ─── PIPELINE ───────────────────────────────────────────────────────────────
+    // ─── PIPELINE DATA ──────────────────────────────────────────────────────────
     const pipelineData = {
       mail: {
         title: 'Stage 1 - Your Cold Mail (Day 1)',
@@ -954,7 +954,6 @@
           '</div>'
         ).join('');
     }
-    showStage(document.querySelector('.pipeline-node'), 'mail');
 
     // ─── TRACKER ────────────────────────────────────────────────────────────────
     const STATUSES     = ['target', 'emailed', 'replied', 'interview', 'offer'];
@@ -1187,16 +1186,16 @@ Return ONLY LaTeX code. Start with \\documentclass`;
       });
     }
 
-    // ─── PIPELINE INIT (safe, runs after DOM + data ready) ────────────────────────
+    // ─── INIT ON DOM READY ──────────────────────────────────────────────────────
     document.addEventListener('DOMContentLoaded', () => {
-      // Set first node active + show its content
+      // Pipeline: activate first node & load its content
       const firstNode = document.querySelector('.pipeline-node[data-stage="mail"]');
       if (firstNode) {
         firstNode.classList.add('active');
         showStage(firstNode, 'mail');
       }
 
-      // ─── SMOOTH SCROLL ──────────────────────────────────────────────────────────
+      // Smooth scroll for anchor links
       document.querySelectorAll('a[href^="#"]').forEach(a => {
         a.addEventListener('click', e => {
           const target = document.querySelector(a.getAttribute('href'));
@@ -1206,6 +1205,7 @@ Return ONLY LaTeX code. Start with \\documentclass`;
     });
   </script>
 
+  
   <!-- lightbox -->
   <div id="imageModal" class="image-modal">
     <span class="modal-close">&times;</span>
