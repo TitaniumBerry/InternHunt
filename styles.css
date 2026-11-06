@@ -1533,3 +1533,17 @@ footer {
 }
 .zoomable-image { cursor: zoom-in; transition: transform 0.2s ease; }
 .zoomable-image:hover { transform: scale(1.02); }
+
+/* Footer helper classes used above */
+.footer-byline { font-size: var(--fs-sm); color: var(--muted); }
+.footer-section-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-2);
+}
+.footer-copyright { font-size: var(--fs-xs); color: var(--muted); font-family: 'JetBrains Mono', monospace; }
+.footer-powered { font-size: var(--fs-xs); color: var(--muted); }
