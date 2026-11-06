@@ -519,7 +519,26 @@
       <div class="pipeline-node"        data-stage="offer"   onclick="showStage(this,'offer')"> <div class="pipeline-node-icon">></div><h4>Offer + Negotiation</h4> <p>Day 18-22</p></div>
     </div>
 
-    <div class="pipeline-detail-panel" id="pipelinePanel"></div>
+    <div class="pipeline-detail-panel" id="pipelinePanel">
+    <!-- Default content (Stage 1) - visible immediately on load -->
+    <h4>Stage 1 - Your Cold Mail (Day 1)</h4>
+    <div class="pipeline-qa">
+      <div class="pipeline-q">What should the subject line be?</div>
+      <div class="pipeline-a">"CS Undergrad @ BITS - Quick idea for [specific product/feature]" - specific, not generic. The product name in the subject line alone gets more opens.</div>
+    </div>
+    <div class="pipeline-qa">
+      <div class="pipeline-q">Who exactly should I send it to?</div>
+      <div class="pipeline-a">Founder directly for companies under 50 people. Head of Engineering / Product for 50-200 people. Never send to a generic careers@ or info@ address.</div>
+    </div>
+    <div class="pipeline-qa">
+      <div class="pipeline-q">What happens after I send?</div>
+      <div class="pipeline-a">If your mail is good, the founder will forward it to their HR with a note like "chat with this person." This is the best possible outcome - now you have an internal champion.</div>
+    </div>
+    <div class="pipeline-qa">
+      <div class="pipeline-q">When should I follow up?</div>
+      <div class="pipeline-a">If no reply in 5-7 days, send one follow-up: "Following up on my email - still happy to share the spec if useful." One follow-up only. Never more.</div>
+    </div>
+  </div>
 
     <div class="flow-detail-grid">
       <div class="flow-detail-card">
@@ -1168,11 +1187,21 @@ Return ONLY LaTeX code. Start with \\documentclass`;
       });
     }
 
-    // ─── SMOOTH SCROLL ──────────────────────────────────────────────────────────
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        const target = document.querySelector(a.getAttribute('href'));
-        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    // ─── PIPELINE INIT (safe, runs after DOM + data ready) ────────────────────────
+    document.addEventListener('DOMContentLoaded', () => {
+      // Set first node active + show its content
+      const firstNode = document.querySelector('.pipeline-node[data-stage="mail"]');
+      if (firstNode) {
+        firstNode.classList.add('active');
+        showStage(firstNode, 'mail');
+      }
+
+      // ─── SMOOTH SCROLL ──────────────────────────────────────────────────────────
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+          const target = document.querySelector(a.getAttribute('href'));
+          if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        });
       });
     });
   </script>
