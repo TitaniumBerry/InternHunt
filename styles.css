@@ -1382,7 +1382,7 @@ footer {
     margin: 0 auto;
 }
 
-/* Top row — two columns, centered together, not spaced apart */
+/* Top row — centered group, but columns push apart slightly */
 .footer-top {
     display: flex;
     flex-wrap: wrap;
@@ -1391,19 +1391,22 @@ footer {
     margin-bottom: 2rem;
 }
 
-/* Left column: logo + byline + creator cards */
+/* Left column: logo + byline + creator cards — push slightly LEFT */
 .footer-top > div:first-child {
     display: flex;
     flex-direction: column;
     gap: var(--space-4);
     max-width: 420px;
+    margin-right: var(--space-6);          /* ← pushes this column left of center */
 }
 
-/* Right column: Playbook + Tools */
+/* Right column: Playbook + Tools — push slightly RIGHT + LOWER */
 .footer-top > div:last-child {
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-8);
+    margin-left: var(--space-6);           /* ← pushes this column right of center */
+    margin-top: 1.5rem;                    /* ← drops it lower */
 }
 
 /* Each nav block (Playbook / Tools) */
@@ -1429,7 +1432,7 @@ footer {
 }
 .footer-top .footer-nav a:hover { color: var(--accent); }
 
-/* Creator cards — override inline gradient/border with new palette */
+/* Creator cards — clean palette */
 .footer-top .author-card-inline {
     background: var(--bg-alt);
     border: 1px solid var(--border);
@@ -1475,8 +1478,13 @@ footer {
 /* ─── RESPONSIVE FOOTER ─── */
 @media (max-width: 768px) {
     .footer-top { flex-direction: column; align-items: center; text-align: center; }
-    .footer-top > div:first-child { max-width: 100%; align-items: center; }
-    .footer-top > div:last-child { justify-content: center; }
+    .footer-top > div:first-child,
+    .footer-top > div:last-child {
+        margin: 0;                          /* reset offsets on mobile */
+        max-width: 100%;
+        align-items: center;
+    }
+    .footer-top > div:last-child { margin-top: var(--space-4); }
     .footer-top .author-card-inline { flex-direction: column; text-align: center; }
     .footer-bottom { flex-direction: column; text-align: center; }
 }
