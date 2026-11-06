@@ -1382,31 +1382,39 @@ footer {
     margin: 0 auto;
 }
 
-/* Top row — centered group, but columns push apart slightly */
+/* Top row — two columns with generous breathing room */
 .footer-top {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--space-6) var(--space-8);
     justify-content: center;
+    gap: var(--space-10) var(--space-12);   /* row gap 6rem, column gap 4.5rem */
     margin-bottom: 2rem;
 }
 
-/* Left column: logo + byline + creator cards — push slightly LEFT */
+/* LEFT COLUMN: logo + byline + creator cards */
 .footer-top > div:first-child {
     display: flex;
     flex-direction: column;
-    gap: var(--space-4);
+    gap: var(--space-6);                     /* ← space between logo/byline/cards */
     max-width: 420px;
-    margin-right: var(--space-6);          /* ← pushes this column left of center */
+    margin-right: var(--space-8);            /* ← pushes left column further left */
 }
 
-/* Right column: Playbook + Tools — push slightly RIGHT + LOWER */
+/* Creator cards — extra space between them */
+.footer-top > div:first-child .author-card-inline {
+    margin-top: var(--space-5);              /* ← gap between the two cards */
+}
+.footer-top > div:first-child .author-card-inline:first-child {
+    margin-top: 0;                           /* first card no extra top */
+}
+
+/* RIGHT COLUMN: Playbook + Tools */
 .footer-top > div:last-child {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--space-8);
-    margin-left: var(--space-6);           /* ← pushes this column right of center */
-    margin-top: 1.5rem;                    /* ← drops it lower */
+    gap: var(--space-10);                    /* ← space between Playbook & Tools blocks */
+    margin-left: var(--space-8);             /* ← pushes right column further right */
+    margin-top: var(--space-6);              /* ← drops it lower (2.5rem) */
 }
 
 /* Each nav block (Playbook / Tools) */
@@ -1477,14 +1485,21 @@ footer {
 
 /* ─── RESPONSIVE FOOTER ─── */
 @media (max-width: 768px) {
-    .footer-top { flex-direction: column; align-items: center; text-align: center; }
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: var(--space-8);                 /* vertical stack gap on mobile */
+    }
     .footer-top > div:first-child,
     .footer-top > div:last-child {
-        margin: 0;                          /* reset offsets on mobile */
+        margin: 0;
         max-width: 100%;
         align-items: center;
     }
-    .footer-top > div:last-child { margin-top: var(--space-4); }
+    .footer-top > div:last-child { margin-top: 0; }
+    .footer-top > div:first-child .author-card-inline { margin-top: var(--space-4); }
+    .footer-top > div:first-child .author-card-inline:first-child { margin-top: 0; }
     .footer-top .author-card-inline { flex-direction: column; text-align: center; }
     .footer-bottom { flex-direction: column; text-align: center; }
 }
@@ -1495,7 +1510,6 @@ footer {
     .filter-tabs  { gap: 6px; }
     .filter-tab   { padding: 6px 12px; font-size: 0.75rem; }
 }
-
 /* ─── IMAGE MODAL ─── */
 .image-modal {
     display: none;
